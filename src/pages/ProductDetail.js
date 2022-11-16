@@ -23,12 +23,17 @@ export function ProductDetail(props) {
                     <div className='pt-4  '>
                     <div className='pb-10'>
                         <p className='font-medium text-[30px] pl-4'>{location.state.name}</p>
-                       <p>Desc</p>
+                       <p></p>
                        <p>ingridents</p>
                     </div>
-
+                    
+                    <div className=' flex justify-center items-center'>
+                        <span className='font-normal text-[30px] mr-5 inline line-through'>${location.state.oldPrice}</span>
+                        <span className='font-medium text-[50px] ml-2'>${location.state.price}</span>
+                    </div>
                     <div className='flex justify-center items-center pt-10' onClick={()=>dispatch(addToCart(location.state))}>
-                        <button  onClick={()=> navigate('/cartpage') } className="border-none w-[500px] p-4 mt-5  bg-black text-white">Add to Cart</button>
+                    
+                        <button  onClick={()=> navigate('/cartpage') } className="border-none w-[500px] mr-2 p-4 mt-5  bg-black text-white">Add to Cart</button>
                     </div>
                     </div>
                 </div>
