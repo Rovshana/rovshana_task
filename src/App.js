@@ -1,13 +1,17 @@
-import { Home } from "./components/Home";
-import { Menu } from "./components/Menu";
+import { Route, Routes } from "react-router-dom";
+ import HomePage from "./pages";
+import ProductsPage from "./pages/ProductsPage";
 
 
 
 function App() {
   return (
     <div>
-      <Home/>
-      <Menu/>
+      <Routes>
+        <Route path="/" element={<HomePage/>}/>
+        <Route path="/productspage" element={<ProductsPage/>} />
+      </Routes>
+     
     </div>
   );
 }

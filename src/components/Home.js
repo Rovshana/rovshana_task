@@ -1,8 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import sushiRestaurant from '../assets/sushiRestaurant.jpg'
 export function Home(props) {
-  
+ const navigate = useNavigate() 
   return (
     <div style={{ backgroundImage: `url(${sushiRestaurant})` }} className="bg-no-repeat bg-cover">
       {/* container */}
@@ -25,7 +26,7 @@ export function Home(props) {
           </div>
           <div className="flex justify-center items-center">
 
-            <button  className="border-none w-[250px] h-[80px] p-2 bg-white text-[30px] font-[300px]">
+            <button  onClick={()=>navigate('/productspage')} className="border-none w-[250px] h-[80px] p-2 bg-white text-[30px] font-[300px]">
               Menu
             </button>
           </div>
