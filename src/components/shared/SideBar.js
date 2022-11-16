@@ -8,7 +8,7 @@ import { MdLocationOn, MdLogout } from "react-icons/md";
 export function Sidebar(props) {
     const navigate = useNavigate()
   return (
-    <div className="w-[134px] h-[700px] bg-black flex flex-col  items-center m-4 fixed  ">
+    <div className="w-[134px] h-[700px] bg-black flex flex-col  items-center m-4  ">
       <div className="mb-10 pt-5  ">
       
       </div>

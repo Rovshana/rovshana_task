@@ -27,9 +27,7 @@ const loadMore = ()=>{
         <>
         {/* continer */}
             <div className='w-[1000px] m-auto h-screen '>
-                <div>
-                    <h1  className='text-[50px] font-medium underline decoration-[#f1d5bb]'>Sushi Foods</h1>
-                </div>
+               
                 {/* cards */}
                 <div className='grid grid-cols-4 gap-4'>
                     {

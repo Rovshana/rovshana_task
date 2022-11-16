@@ -16,16 +16,12 @@ useEffect(() => {
   return (
     <>
       {/* container */}
-      <div className="w-[1200px] h-screen mx-auto flex">
+      <div className="w-[1200px] h-screen mx-auto flex pt-4">
         {/* cart page products */}
 
         <div>
-          <div>
-            <h1 className="text-[50px] font-medium underline decoration-[#f1d5bb]">
-              Your Cart
-            </h1>
-          </div>
-          <div className=" w-[600px] h-[600px]  pt-4 bg-[#F1D5BB] mt-5">
+          
+          <div className=" w-[600px] h-[600px]   bg-[#F1D5BB] pt-4 ">
             {product.cartItems?.map((item) => (
               <div className="flex justify-between mb-2 " key={item.id}>
                 <div className="pl-3 pr-3 flex justify-between  ">
@@ -70,7 +66,7 @@ useEffect(() => {
         </div>
 
         {/* total */}
-        <div className="w-[400px] h-[550px] ml-4  mt-[100px] border-2">
+        <div className="w-[400px] h-[550px] ml-4   border-2">
           <div className="bg-[#F1D5BB] h-[275px]">
             <h2 className="text-[40px] text-black pl-3">Your Subtotal</h2>
             <div className="pl-3 mb-8 flex">
