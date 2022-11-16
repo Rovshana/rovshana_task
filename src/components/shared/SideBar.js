@@ -15,10 +15,10 @@ export function Sidebar(props) {
       <div  className="icon cursor-pointer w-full h-[50px] mb-10 hover:bg-[#f1d5bb] hover:text-black flex  justify-center items-center">
         <HiOutlineHome onClick={()=>navigate('/')} size={30} />
       </div>
-      <div onClick={()=>navigate('/productspage')}  className="icon cursor-pointer w-full h-[50px] mb-10 hover:bg-[#f1d5bb] hover:text-black flex  justify-center items-center">
-        <CiForkAndKnife size={30} />
+      <div onClick={()=>navigate('/productspage')}   className="icon cursor-pointer w-full h-[50px] mb-10 hover:bg-[#f1d5bb] hover:text-black flex  justify-center items-center">
+        <CiForkAndKnife  size={30} />
       </div>
-      <div  className="icon cursor-pointer w-full h-[50px] mb-10 hover:bg-[#f1d5bb] hover:text-black flex  justify-center items-center">
+      <div  onClick={()=>navigate('/cartpage')}  className="icon cursor-pointer w-full h-[50px] mb-10 hover:bg-[#f1d5bb] hover:text-black flex  justify-center items-center">
         <BsCart3 size={30} />
       </div>
       <div className="icon cursor-pointer w-full h-[50px] mb-10 hover:bg-[#f1d5bb] hover:text-black flex  justify-center items-center">

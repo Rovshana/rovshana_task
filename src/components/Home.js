@@ -19,9 +19,9 @@ export function Home(props) {
             <p className="text-[25px] font-normal ">
               {" "}
               <span className="pl-6 ">
-                People eat with their eyes and Sushi creates an easy way for
+              Looking to eat something that tastes delicious and is also considered a health food? Then look no further than sushi! From now on, as you eat your sushi, you can thank yourself for doing a real service for your heart, brain, and general wellbeing.
               </span>{" "}
-              customers to order when they can see beautiful photos of your food
+    
             </p>
           </div>
           <div className="flex justify-center items-center">

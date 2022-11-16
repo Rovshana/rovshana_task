@@ -14,6 +14,7 @@ export const ProductSlice = createSlice({
       setData: (state, action)=>{
         state.data.push(action.payload)
       },
+      //adding to also increasing the count
       addToCart: (state, action)=>{
 const choossenItemIndex = state.cartItems.findIndex((item)=>item.id === action.payload.id)
 
@@ -24,15 +25,38 @@ if(choossenItemIndex >= 0){
     state.cartItems.push(product)
    }
       },
+      // decereasing count
+      decreaseQuantity( state, action){
+        const itemIndex = state.cartItems.findIndex((item)=> item.id === action.payload.id);
+        if(state.cartItems[itemIndex].cartQuantity > 1 ){
+  state.cartItems[itemIndex].cartQuantity -= 1;
+        } else if(state.cartItems[itemIndex].cartQuantity === 1){
+          const filteredCartItems = state.cartItems.filter((item)=>item.id !== action.payload.id)
+          state.cartItems = filteredCartItems
+        }
+  
+      },
       removeItem: (state, action)=>{
         const otheritems = state.cartItems.filter(item => item.id !== action.payload.id)
         state.cartItems = otheritems
 
+      },
+      getTotal(state,action){
+        let {total, quantity} = state.cartItems.reduce((cartTotal, cartItem)=>{
+          const {cartQuantity, price} = cartItem;
+          const itemTotal = cartQuantity * price;
+          cartTotal.total += itemTotal;
+          cartTotal.quantity += cartQuantity;
+          return cartTotal
+        }, {total: 0,
+        quantity: 0});
+        state.cartTotalQuantity = quantity;
+        state.cartTotalAmount = total;
       }
     },
   })
   
   // Action creators are generated for each case reducer function
-  export const {setData, addToCart, removeItem } = ProductSlice.actions
+  export const {setData, addToCart, decreaseQuantity, removeItem, getTotal} = ProductSlice.actions
   
   export default ProductSlice.reducer
