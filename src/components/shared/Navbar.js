@@ -4,10 +4,9 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 export function Navbar(props) {
   const navigate = useNavigate();
-  const cartTotalQuantity = useSelector(
-    (state) => state.products.cartTotalQuantity
+  const basketCount = useSelector(
+    (state) => state.products.cartItems
   );
-  console.log("test", cartTotalQuantity);
   return (
     <div className="w-full h-[100px] bg-black text-[#f1d5bb] ">
       <div className="flex justify-between items-center">
@@ -24,8 +23,8 @@ export function Navbar(props) {
           <div className="cursor pointer relative">
             <BsCart4 size={50} />
 {
-    cartTotalQuantity === 0? " " :  <span className="absolute top-0 right-0 text-black rounded-full bg-[#f1d5bb] text-center text-[20px] w-[30px] h-[30px]">
-    { cartTotalQuantity}
+    basketCount?.length === 0? " " :  <span className="absolute top-0 right-0 text-black rounded-full bg-[#f1d5bb] text-center text-[20px] w-[30px] h-[30px]">
+    { basketCount.length}
   </span>
 }
            
