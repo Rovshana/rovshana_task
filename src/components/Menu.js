@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 export function Menu(props) {
     const [data, setData] =  useState([])
     const state = useSelector(state=>state.products)
-    console.log("reduxdan",state)
+    
     const [visible, setVisible] = useState(8)
     const navigate = useNavigate()
     useEffect(() => {

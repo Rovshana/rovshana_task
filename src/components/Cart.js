@@ -7,7 +7,7 @@ import { addToCart, decreaseQuantity, removeItem, getTotal} from "../store/slice
 
 export function Cart (props) {
   const product = useSelector((state) => state.products);
-  console.log("cart", product);
+  
 const dispatch = useDispatch();
 useEffect(() => {
   dispatch(getTotal())
