@@ -21,10 +21,9 @@ export function ProductDetail(props) {
                     </div>
                     {/* details */}
                     <div className='pt-4  '>
-                    <div className='pb-10'>
+                    <div className='pb-10 flex justify-center items-center'>
                         <p className='font-medium text-[30px] pl-4'>{location.state.name}</p>
-                       <p></p>
-                       <p>ingridents</p>
+                       
                     </div>
                     
                     <div className=' flex justify-center items-center'>

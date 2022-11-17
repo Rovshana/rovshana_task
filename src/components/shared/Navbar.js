@@ -8,7 +8,7 @@ export function Navbar(props) {
     (state) => state.products.cartItems
   );
   return (
-    <div className="w-full h-[100px] bg-black text-[#f1d5bb] ">
+    <div className="w-full  bg-black text-[#f1d5bb] ">
       <div className="flex justify-between items-center">
         <div className="ml-5">
           <p
@@ -21,7 +21,7 @@ export function Navbar(props) {
 
         <div className="mr-5">
           <div className="cursor pointer relative">
-            <BsCart4 size={50} />
+            <BsCart4  className="cursor pointer " size={50} onClick={()=>navigate('/cartpage')}  />
 {
     basketCount?.length === 0? " " :  <span className="absolute top-0 right-0 text-black rounded-full bg-[#f1d5bb] text-center text-[20px] w-[30px] h-[30px]">
     { basketCount.length}

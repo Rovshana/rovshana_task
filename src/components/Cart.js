@@ -16,7 +16,7 @@ useEffect(() => {
   return (
     <>
       {/* container */}
-      <div className="w-[1200px] h-screen mx-auto flex pt-4">
+      <div className="w-[1200px]  mx-auto flex pt-4">
         {/* cart page products */}
 
         <div>
