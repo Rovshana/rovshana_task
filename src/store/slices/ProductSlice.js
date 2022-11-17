@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
     data: [],
-    cartItems: [],
+    cartItems: localStorage.getItem("cartItems") ? JSON.parse(localStorage.getItem("cartItems") ) : [],
     cartTotalQuantity: 0,
     cartTotalAmount: 0,
 }
@@ -23,7 +23,8 @@ if(choossenItemIndex >= 0){
    } else{
     const product = {...action.payload, cartQuantity: 1}
     state.cartItems.push(product)
-   }
+   } 
+   localStorage.setItem("cartItems", JSON.stringify(state.cartItems))
       },
       // decereasing count
       decreaseQuantity( state, action){
@@ -33,12 +34,15 @@ if(choossenItemIndex >= 0){
         } else if(state.cartItems[itemIndex].cartQuantity === 1){
           const filteredCartItems = state.cartItems.filter((item)=>item.id !== action.payload.id)
           state.cartItems = filteredCartItems
+        
         }
+        localStorage.setItem('cartItems', JSON.stringify(state.cartItems))
   
       },
       removeItem: (state, action)=>{
         const otheritems = state.cartItems.filter(item => item.id !== action.payload.id)
         state.cartItems = otheritems
+        localStorage.setItem("cartItems", JSON.stringify(state.cartItems))
 
       },
       getTotal(state,action){
