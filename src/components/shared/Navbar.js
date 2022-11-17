@@ -8,7 +8,7 @@ export function Navbar(props) {
     (state) => state.products.cartItems
   );
   return (
-    <div className="w-full  bg-black text-[#f1d5bb] ">
+    <div className="w-full  bg-black text-[#f1d5bb] p-4  ">
       <div className="flex justify-between items-center">
         <div className="ml-5">
           <p
